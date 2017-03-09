@@ -4,9 +4,14 @@ pipeline {
         string(name: 'Greeting', defaultValue: 'Hello', description: 'How should I greet the world?')
     }
     stages {
-        stage('Example') {
+        stage('English') {
             steps {
                 echo "${Greeting} World!"
+            }
+        }
+        stage('Portuguese') {
+            steps {
+                echo "${Greeting} Mundo!"
             }
         }
     }
